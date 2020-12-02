@@ -1,3 +1,3 @@
 module.exports = {
-  Test: require("./TestModel")
+  Group: require("./Group")
 }
