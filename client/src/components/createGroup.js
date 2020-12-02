@@ -2,15 +2,14 @@ import { useState } from 'react'
 
 function CreateGroup() {
 
-    // Use State and Hooks //
+    // Use State and Hooks Setting //
 
     const [GroupObject, setGroupObject] = useState({ groupName: "", groupPassword: "", groupMembersNum: "" });
-
 
     const handleInputChange = (e) => {
         e.preventDefault()
         setGroupObject({ ...GroupObject, [e.target.name]: e.target.value })
-      }
+    }
 
     // External JS functions //
 
@@ -18,7 +17,6 @@ function CreateGroup() {
         event.preventDefault();
         console.log(GroupObject);
     }
-
 
     // Visual Rendering //
 
