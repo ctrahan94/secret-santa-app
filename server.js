@@ -1,5 +1,4 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -20,5 +19,5 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/secret-santa");
 
 // Start the API server
 app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+  console.log(`🌎  ==> Server now listening on PORT ${PORT}!`);
 });

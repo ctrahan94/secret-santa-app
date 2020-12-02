@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const groupSchema = new Schema({
   name: { type: String, required: true },
   password: { type: String, required: true },
-  Members: { type: Number, required: true },
+  membersNum: { type: Number, required: true },
+  membersName: {type: Array, required: false},
   date: { type: Date, default: Date.now }
 });
 

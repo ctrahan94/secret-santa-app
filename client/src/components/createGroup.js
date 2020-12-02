@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import API from "../utils/API"
 
 function CreateGroup() {
 
     // Use State and Hooks Setting //
 
-    const [GroupObject, setGroupObject] = useState({ groupName: "", groupPassword: "", groupMembersNum: "" });
+    const [GroupObject, setGroupObject] = useState({ groupName: "", groupPassword: "", membersName: [], membersNum: "" });
 
     const handleInputChange = (e) => {
         e.preventDefault()
@@ -13,10 +14,19 @@ function CreateGroup() {
 
     // External JS functions //
 
-    const handleBtnClick = (event) => {
-        event.preventDefault();
-        console.log(GroupObject);
+    // Handle submit new group button + Posting to DB //
+
+    const handleBtnClick = (e) => {
+        e.preventDefault();
+        console.log(GroupObject)
+        API.createGroup(GroupObject)
+        .catch(err => console.log(err));
+        
     }
+
+
+
+
 
     // Visual Rendering //
 
@@ -39,7 +49,7 @@ function CreateGroup() {
                         {/* Group Members  */}
 
                         <h4>Group Members:</h4>
-                        <input type="number" name="groupMembersNum" onChange={handleInputChange} /><br></br>
+                        <input type="number" name="membersNum" onChange={handleInputChange} /><br></br>
 
                         <button className="create-group-button" onClick={handleBtnClick}>Submit</button>
                     </form>
