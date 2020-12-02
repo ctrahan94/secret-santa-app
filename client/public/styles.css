@@ -1,0 +1,21 @@
+
+
+
+/* Create Group Modal  */
+
+.create-group-modal {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgb(67, 186, 216);
+    color: white;
+    border-radius: 25px;
+}
+
+.create-group-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    background: linear-gradient(to right, rgb(71, 201, 140), rgb(219, 93, 131));
+    color: white;
+}
