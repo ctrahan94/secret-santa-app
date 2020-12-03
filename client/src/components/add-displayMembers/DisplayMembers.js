@@ -22,7 +22,7 @@ export default function DisplayMembers(props) {
             <div className="row members-display-modal">
                 <div className="col-12">
 
-                <h2>Group Members:</h2>
+                <h2>Members:</h2>
 
                 <ol>
                     <li className="name-display">

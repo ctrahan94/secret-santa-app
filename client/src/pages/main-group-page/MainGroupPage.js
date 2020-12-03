@@ -1,7 +1,14 @@
 import React from 'react'
 import DisplayMembers from "../../components/add-displayMembers/DisplayMembers"
 
-export default function MainGroupPage() {
+export default function MainGroupPage(props) {
+
+    // Use State and Hooks Setting //
+
+
+
+    // External JS functions //
+
 
 
 
@@ -9,6 +16,9 @@ export default function MainGroupPage() {
 
 
     
+
+    // Visual Rendering //
+
     return (
         <div className="container">
 
@@ -16,8 +26,8 @@ export default function MainGroupPage() {
             {/* Main Title Displaying Group Name And Password  */}
 
             <div className="row group-main-title">
-                <div className="col-12">
-
+                <div className="col-8">
+                    <h1>Name:{props.name}</h1>
                 </div>
             </div>
 

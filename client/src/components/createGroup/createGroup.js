@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import API from "../../utils/API"
+import { useHistory } from 'react-router-dom';
+
 
 function CreateGroup() {
 
@@ -20,8 +22,15 @@ function CreateGroup() {
         e.preventDefault();
         console.log(GroupObject)
         API.createGroup(GroupObject)
-        .catch(err => console.log(err));
+            .catch(err => console.log(err));
     }
+
+    function async RouteChange = () => {
+        let path = "/group-main-page/";
+        let history = useHistory();
+        history.push(path);
+    }
+
 
 
     // Visual Rendering //
@@ -47,7 +56,7 @@ function CreateGroup() {
                         <h4>Group Members:</h4>
                         <input type="number" name="membersNum" onChange={handleInputChange} /><br></br>
 
-                        <button className="create-group-button" onClick={handleBtnClick}>Submit</button>
+                        <button className="create-group-button" onClick={handleBtnClick, RouteChange}>Submit</button>
                     </form>
                 </div>
             </div>
