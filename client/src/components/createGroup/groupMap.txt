@@ -18,7 +18,8 @@ USER DATABASE INFO
 {
 
 "_id" : ObjectId("5fc68128bfc85ed4cde2f751"),
-"name" : "The boiz",
+"name" : "Colby Trahan",
+"email" : "test@email.com"
 "password" : "123",
 "Groups": ["5fc68128bfc85ed4cde2f751", "5fccde2f751"]
 "Wishlist": [

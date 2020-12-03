@@ -11,7 +11,6 @@ function App() {
     <>
     <Route exact path="/" component={CreateGroup}></Route>
     <Route exact path="/" component={FindGroup}></Route>
-
     </>
   </Router>
   )
