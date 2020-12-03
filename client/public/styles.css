@@ -1,3 +1,31 @@
+/* ////////////////////////////// */
+        /* Pages CSS */
+/* ////////////////////////////// */
+
+/* Main Group Page CSS  */
+
+
+.group-main-title {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////// */
+        /* Component CSS */
+/* ////////////////////////////// */
+
 /* Create Group Component  */
 
 .create-group-modal {
@@ -23,7 +51,6 @@
     border: none;
     width: 100px;
 }
-
 
 /* Find Group Component  */
 
@@ -61,7 +88,6 @@
     width: 100px;
 }
 
-
 /* Add Members Component */
 
 .add-members-modal {
@@ -86,7 +112,6 @@
 .add-member-button {
     margin-top: 10px;
     border-radius: 25px;
-    margin-left: 20px;
     background-color: white;
     color: #4C5051;
     border: none;

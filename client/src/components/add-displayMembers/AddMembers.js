@@ -22,8 +22,10 @@ export default function AddMembers(groupName) {
     const addMember = (e) => {
         e.preventDefault();
         console.log(MemberString)
-        // API.addMembers(MemberString)
-        // .catch(err => console.log(err));
+        API.addMembers({
+            
+        })
+            .catch(err => console.log(err));
     }
 
     // Visual Rendering //
