@@ -8,7 +8,7 @@ GROUP DATABASE INFO
 "name" : "The boiz",
 "password" : "123",
 "membersNum" : 12,
-"memberNames:" [Casino, Ryan, Colby, Joshua, Charlie]
+"memberNames:" ["Casino Apte", "Ryan Witherspoon", "Colby Trahan", Joshua, Charlie]
 
 }
 
@@ -18,9 +18,9 @@ USER DATABASE INFO
 {
 
 "_id" : ObjectId("5fc68128bfc85ed4cde2f751"),
-"name" : "Colby Trahan",
-"email" : "test@email.com"
-"password" : "123",
+"name" : "Casino Apte",
+"email" : "Casino@brazzers.com
+"password" : "iloveapples",
 "Groups": ["5fc68128bfc85ed4cde2f751", "5fccde2f751"]
 "Wishlist": [
     {
