@@ -5,7 +5,6 @@ const cors = require("cors");
 const bodyParser = require("body-parser")
 const app = express();
 const PORT = process.env.PORT || 3001;
-const authRoutes = require("./routes/auth")
 const { db } = require("./models/User")
 require("dotenv").config;
 
@@ -22,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Add routes, both API and view
 app.use(routes);
-app.use("/api", authRoutes)
+
 
 
 // Connect to the Mongo DB

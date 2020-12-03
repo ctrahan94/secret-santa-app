@@ -82,7 +82,7 @@ exports.signin = (req, res) => {
        errors.push({ email: "invalid email" });
      }
      if (!password) {
-       errors.push({ passowrd: "required" });
+       errors.push({ password: "required" });
      }
      if (errors.length > 0) {
       return res.status(422).json({ errors: errors });
@@ -99,7 +99,7 @@ exports.signin = (req, res) => {
 "incorrect" }] 
                });
               }
-              
+
        let access_token = createJWT(
           user.email,
           user._id,
@@ -108,7 +108,7 @@ exports.signin = (req, res) => {
        jwt.verify(access_token, process.env.TOKEN_SECRET, (err,
 decoded) => {
          if (err) {
-            res.status(500).json({ erros: err });
+            res.status(500).json({ error1: err });
          }
          if (decoded) {
              return res.status(200).json({
@@ -119,10 +119,10 @@ decoded) => {
            }
          });
         }).catch(err => {
-          res.status(500).json({ erros: err });
+          res.status(500).json({ error2: err });
         });
       }
    }).catch(err => {
-      res.status(500).json({ erros: err });
+      res.status(500).json({ error3: err });
    });
 }
