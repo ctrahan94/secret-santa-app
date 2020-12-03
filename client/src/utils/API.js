@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
 
   //////////////////////////////
-    // Group Database API //
+  // Group Database API //
   //////////////////////////////
 
   // Posting new group to Database //
@@ -25,10 +25,16 @@ export default {
 
   addMembers: function (name) {
     return axios.put("/api/members/add" + name)
-    .then(res => {
-      return res
-    })
+  },
+
+  // Finding members to use as props for display component //
+
+  findUser: function (name, id) {
+    return axios.get("/api/groups/user/" + name + "/" + id)
+      .then(res => {
+        return res
+      })
   }
 
-
+  
 }
