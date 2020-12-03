@@ -32,7 +32,7 @@ export default function AddMembers() {
             <div className="row add-members-modal">
                 <div className="col-12">
 
-                    <h4>Add members:</h4>
+                    <h4 className="add-title-main">Add members:</h4>
 
                     <form>
 
@@ -41,12 +41,7 @@ export default function AddMembers() {
                         <h5 className="members-add-title">Full Name:</h5>
                         <input type="text" name="name" onChange={handleInputChange}></input>
 
-                        {/* Email  */}
-
-                        <h5 className="members-add-title">Email:</h5>
-                        <input type="email" name="email" onChange={handleInputChange}></input><br></br>
-
-                        <button className="add-member-button" onClick={addMember}>Add Member</button>
+                        <button className="add-member-button" onClick={addMember}>Add</button>
 
                     </form>
 
