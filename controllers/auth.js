@@ -17,6 +17,7 @@ exports.signup = (req, res, next) => {
            email: email,
            password: password,
          });
+
          bcrypt.genSalt(10, function(err, salt) { bcrypt.hash(password, salt, function(err, hash) {
          if (err) throw err;
          user.password = hash;
@@ -56,6 +57,7 @@ exports.signin = (req, res) => {
 "incorrect" }] 
               });
              }
+             
        let access_token = createJWT(
          user.email,
          user._id,
