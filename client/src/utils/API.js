@@ -6,9 +6,14 @@ export default {
   
   createGroup: function(groupData) {
     return axios.post("/api/groups", groupData);
+  },
+
+  findGroup: function(name, password) {
+    return axios.get("/api/groups/group/" + name + "/" + password)
+  .then(res => {
+    return res
+  }) 
   }
-
-
-
+  
   
 }
