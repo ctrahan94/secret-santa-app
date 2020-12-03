@@ -19,4 +19,23 @@ router.get("/group/:name/:pw", (req, res)  => {
 // Matches with "/api/group"
 router.route("/").post(groupsController.create);
 
+// router.post("/groups/:name"), (req, res) => {
+//   db.Group.create({
+//     name: req.body.name,
+//     password: req.body.password,
+//     membersNum: req.body.membersNum,
+//     membersName: []
+//   })
+//   .then((data) => {
+//     res.json(data)
+//   })
+//   .catch((err) => {
+//     res.send(500).json(err);
+//   });
+// }
+
+
+
+
+
 module.exports = router;

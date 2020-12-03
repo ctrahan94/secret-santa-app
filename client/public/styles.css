@@ -1,4 +1,32 @@
-/* Create Group Modal  */
+/* ////////////////////////////// */
+        /* Pages CSS */
+/* ////////////////////////////// */
+
+/* Main Group Page CSS  */
+
+
+.group-main-title {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////// */
+        /* Component CSS */
+/* ////////////////////////////// */
+
+/* Create Group Component  */
 
 .create-group-modal {
     display: inline-block;
@@ -24,8 +52,7 @@
     width: 100px;
 }
 
-
-/* Find Group Modal  */
+/* Find Group Component  */
 
 .find-group-modal {
     display: inline-block;
@@ -41,7 +68,12 @@
     margin-bottom: 20px;
 }
 
-.find-title {
+.find-title-name {
+    margin-bottom: 10px;
+}
+
+.find-title-password {
+    margin-top: 10px;
     margin-bottom: -5px;
 }
 
@@ -55,3 +87,54 @@
     border: none;
     width: 100px;
 }
+
+/* Add Members Component */
+
+.add-members-modal {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    background-color:#80E0F3;
+    color: white;
+    border-radius: 25px;
+    padding: 15px 10px;
+}
+
+.add-title-main {
+    margin-top: 30px;
+}
+
+.members-add-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.add-member-button {
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: white;
+    color: #4C5051;
+    border: none;
+    width: 70px;
+}
+
+/* Display Members Component */
+
+.members-display-modal {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    background-color:#80E0F3;
+    color: white;
+    border-radius: 25px;
+    padding: 15px 10px;
+}
+
+.name-display {
+    font-size: x-large;
+    list-style: none;
+    margin-left: -30px;
+}
+
+
+
