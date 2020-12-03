@@ -1,9 +1,10 @@
-import React from 'react'
-
-export default function findGroup() {
+import React, {useRef} from 'react';
+import API from '../../utils/API';
+export default function FindGroup() {
 
     // Use State and Hooks Setting //
-
+    const passwordRef = useRef()
+    const groupRef = useRef()
     
 
 
@@ -11,8 +12,10 @@ export default function findGroup() {
 
     // External JS functions //
 
-    const findGroup = (e) => {
-        console.log();
+    const findGroup = async (e) => {
+        e.preventDefault()
+        const {data} = await API.findGroup(groupRef.current.value, passwordRef.current.value)
+        console.log(data);
     }
 
 
@@ -29,9 +32,10 @@ export default function findGroup() {
                 <form>
 
                     {/* Group Name  */}
-
+                    <h4 className="find-group">Group:</h4>
+                    <input type="text" ref={groupRef} name="join-group" placeholder="Group name" />
                     <h4 className="find-title">Password:</h4>
-                    <input type="text" name="join-password" placeholder="Holly Jolly Christmas"/>
+                    <input type="text"  ref={passwordRef} name="join-password" placeholder="Holly Jolly Christmas"/>
 
                     <button className="find-group-button" onClick={findGroup}>Submit</button>
                 </form>
