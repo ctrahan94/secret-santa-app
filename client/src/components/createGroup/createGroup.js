@@ -21,11 +21,7 @@ function CreateGroup() {
         console.log(GroupObject)
         API.createGroup(GroupObject)
         .catch(err => console.log(err));
-        
     }
-
-
-
 
 
     // Visual Rendering //
