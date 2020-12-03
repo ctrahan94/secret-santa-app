@@ -1,9 +1,21 @@
 import { useState } from 'react'
 import API from "../../utils/API"
+<<<<<<< HEAD
 import { useHistory } from 'react-router-dom';
 
+=======
+import { useHistory, Link } from "react-router-dom";
+>>>>>>> master
 
 function CreateGroup() {
+   
+   
+ const history = useHistory();
+
+const routeChange = () =>{ 
+    let path = "/:name"; 
+    history.push(path);
+  }
 
     // Use State and Hooks Setting //
 
@@ -56,7 +68,11 @@ function CreateGroup() {
                         <h4>Group Members:</h4>
                         <input type="number" name="membersNum" onChange={handleInputChange} /><br></br>
 
+<<<<<<< HEAD
                         <button className="create-group-button" onClick={handleBtnClick, RouteChange}>Submit</button>
+=======
+                        <button className="create-group-button" onClick={handleBtnClick, routeChange}>Submit</button>
+>>>>>>> master
                     </form>
                 </div>
             </div>

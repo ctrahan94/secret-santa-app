@@ -2,7 +2,9 @@ import { useState } from 'react'
 import API from "../../utils/API"
 
 
-export default function AddMembers() {
+
+export default function AddMembers(groupName) {
+    
 
     // Use State and Hooks Setting //
 
@@ -44,6 +46,8 @@ export default function AddMembers() {
                         <input type="text" name="name" onChange={handleInputChange}></input>
 
                         <button className="add-member-button" onClick={addMember}>Add</button>
+                        {/* <Link to="/signup" className="btn btn-primary">Sign up</Link> */}
+
 
                     </form>
 
