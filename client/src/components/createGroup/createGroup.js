@@ -1,21 +1,8 @@
 import { useState } from 'react'
 import API from "../../utils/API"
-<<<<<<< HEAD
-import { useHistory } from 'react-router-dom';
-
-=======
-import { useHistory, Link } from "react-router-dom";
->>>>>>> master
+import { useHistory, Link} from "react-router-dom";
 
 function CreateGroup() {
-   
-   
- const history = useHistory();
-
-const routeChange = () =>{ 
-    let path = "/:name"; 
-    history.push(path);
-  }
 
     // Use State and Hooks Setting //
 
@@ -34,16 +21,18 @@ const routeChange = () =>{
         e.preventDefault();
         console.log(GroupObject)
         API.createGroup(GroupObject)
-            .catch(err => console.log(err));
+            .catch(err => console.log(err))
     }
 
-    function async RouteChange = () => {
-        let path = "/group-main-page/";
-        let history = useHistory();
+    // Redirect Page to Main Group //
+
+    const history = useHistory();
+
+
+    const RouteChange = () => {
+        let path = "/main-group-page";
         history.push(path);
     }
-
-
 
     // Visual Rendering //
 
@@ -68,11 +57,7 @@ const routeChange = () =>{
                         <h4>Group Members:</h4>
                         <input type="number" name="membersNum" onChange={handleInputChange} /><br></br>
 
-<<<<<<< HEAD
-                        <button className="create-group-button" onClick={handleBtnClick, RouteChange}>Submit</button>
-=======
-                        <button className="create-group-button" onClick={handleBtnClick, routeChange}>Submit</button>
->>>>>>> master
+                        <button className="create-group-button" onClick={handleBtnClick}>Submit</button>
                     </form>
                 </div>
             </div>
