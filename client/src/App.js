@@ -15,10 +15,3 @@ function App() {
 
 export default App;
 
-
-/*
-Inside handlbtn send testString to the back end to the /api/test/add
-this post it to the database
-
-we need a get route to post to the page
-*/
