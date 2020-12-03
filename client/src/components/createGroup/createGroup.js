@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import API from "../utils/API"
+import API from "../../utils/API"
 
 function CreateGroup() {
 
     // Use State and Hooks Setting //
 
-    const [GroupObject, setGroupObject] = useState({ groupName: "", groupPassword: "", membersName: [], membersNum: "" });
+    const [GroupObject, setGroupObject] = useState({ name: "", password: "", membersName: [], membersNum: "" });
 
     const handleInputChange = (e) => {
         e.preventDefault()
@@ -39,12 +39,12 @@ function CreateGroup() {
                         {/* Group Name  */}
 
                         <h4>Group Name:</h4>
-                        <input type="text" name="groupName" onChange={handleInputChange} />
+                        <input type="text" name="name" onChange={handleInputChange} />
 
                         {/* Group Password  */}
 
                         <h4>Group Password:</h4>
-                        <input type="password" name="groupPassword" onChange={handleInputChange} />
+                        <input type="password" name="password" onChange={handleInputChange} />
 
                         {/* Group Members  */}
 

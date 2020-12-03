@@ -1,23 +1,57 @@
-
-
-
 /* Create Group Modal  */
 
 .create-group-modal {
     display: inline-block;
     margin-top: 20px;
     text-align: center;
-    background: linear-gradient(to right, rgb(53, 243, 154), rgb(236, 68, 118));
+    background-color:#80E0F3;
     color: white;
     border-radius: 25px;
     padding: 15px 10px;
+}
+
+.create-titles {
+    padding: 5px;
 }
 
 .create-group-button {
     margin-top: 20px;
     margin-bottom: 5px;
     border-radius: 25px;
-    background-color: rgb(97, 208, 236);
-    color: white;
+    background-color: white;
+    color: #4C5051;
     border: none;
+    width: 100px;
+}
+
+
+/* Find Group Modal  */
+
+.find-group-modal {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    background-color:#80E0F3;
+    color: white;
+    border-radius: 25px;
+    padding: 15px 10px;
+}
+
+.find-title-main {
+    margin-bottom: 20px;
+}
+
+.find-title {
+    margin-bottom: -5px;
+}
+
+.find-group-button {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    border-radius: 25px;
+    background-color: white;
+    color: #4C5051;
+    border: none;
+    width: 100px;
 }

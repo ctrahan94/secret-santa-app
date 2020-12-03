@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import createGroup from "./components/createGroup"
+import createGroup from "./components/./createGroup/createGroup"
 
 
 function App() {
