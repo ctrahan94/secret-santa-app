@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import API from "../../utils/API"
-import { useHistory, Link} from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function CreateGroup() {
 
@@ -26,13 +26,12 @@ function CreateGroup() {
 
     // Redirect Page to Main Group //
 
-    const history = useHistory();
+    // const history = useHistory();
 
-
-    const RouteChange = () => {
-        let path = "/main-group-page";
-        history.push(path);
-    }
+    // const RouteChange = () => {
+    //     let path = "/main-group-page";
+    //     history.push(path);
+    // }
 
     // Visual Rendering //
 

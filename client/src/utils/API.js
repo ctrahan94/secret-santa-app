@@ -23,8 +23,8 @@ export default {
 
   // Adding members to the membersName array in Group Database //
 
-  addMembers: function (name) {
-    return axios.put("/api/members/add" + name)
+  addMembers: function (memberName) {
+    return axios.put("/api/members/add", memberName)
   },
 
   // Finding members to use as props for display component //
