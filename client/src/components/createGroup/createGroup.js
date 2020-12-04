@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import API from "../../utils/API"
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function CreateGroup() {
 
@@ -27,15 +27,13 @@ function CreateGroup() {
             .then(RouteChange())
     }
 
-    // Redirect Page to Main Group //
+    // Redirect Page to Main Group Page //
 
     const history = useHistory();
-    // const {_id} = useParams
 
     const RouteChange = async () => {
-        const {data} = await API.findGroup(groupRef.current.value, passwordRef.current.value)
-        console.log(data);
-        let path = "/group/" + data._id
+        const { data } = await API.findGroup(groupRef.current.value, passwordRef.current.value)
+        let path = "/" + data._id + "/" + data.name
         history.push(path);
     }
 

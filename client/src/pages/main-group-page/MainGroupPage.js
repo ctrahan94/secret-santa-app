@@ -1,7 +1,9 @@
 import React from 'react'
 import DisplayMembers from "../../components/add-displayMembers/DisplayMembers"
+import { useParams } from "react-router-dom";
+import API from "../../utils/API"
 
-export default function MainGroupPage(props) {
+export default function MainGroupPage() {
 
     // Use State and Hooks Setting //
 
@@ -9,13 +11,13 @@ export default function MainGroupPage(props) {
 
     // External JS functions //
 
+    // Dynamically Displaying Group Name For Title //
+
+    const params = useParams();
+
+    // Pushing Members to the Groups MemberNames Array //
 
 
-
-
-
-
-    
 
     // Visual Rendering //
 
@@ -26,8 +28,8 @@ export default function MainGroupPage(props) {
             {/* Main Title Displaying Group Name And Password  */}
 
             <div className="row group-main-title">
-                <div className="col-8">
-                    <h1>Name:{props.name}</h1>
+                <div className="col-6 offset-4 group-title">
+                    <h1>Name: {params.name}</h1>
                 </div>
             </div>
 
@@ -61,11 +63,11 @@ export default function MainGroupPage(props) {
 
             </div>
 
-
-
-
-
-
         </div>
     )
+
+
+
+
+
 }
