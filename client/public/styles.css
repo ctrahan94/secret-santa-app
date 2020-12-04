@@ -136,5 +136,9 @@
     margin-left: -30px;
 }
 
+/* Display Wishlist Component */
 
+.modal-wishlist {
+    color: gray;
+}
 
