@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import API from "../../utils/API"
 
 
 
 export default function AddMembers(groupName) {
-    
+
 
     // Use State and Hooks Setting //
 
-    const [MemberString, setMember] = useState({ name: ""})
+    const [MemberString, setMember] = useState({ name: "" })
 
     const handleInputChange = (e) => {
         e.preventDefault()
@@ -22,9 +22,7 @@ export default function AddMembers(groupName) {
     const addMember = (e) => {
         e.preventDefault();
         console.log(MemberString)
-        API.addMembers({
-            
-        })
+        API.addMembers(MemberString)
             .catch(err => console.log(err));
     }
 

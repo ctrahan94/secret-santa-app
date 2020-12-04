@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import API from "../../utils/API"
-import { useHistory, Link } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 function CreateGroup() {
 
     // Use State and Hooks Setting //
+
+    const passwordRef = useRef()
+    const groupRef = useRef()
 
     const [GroupObject, setGroupObject] = useState({ name: "", password: "", membersName: [], membersNum: "" });
 
@@ -19,19 +22,22 @@ function CreateGroup() {
 
     const handleBtnClick = (e) => {
         e.preventDefault();
-        console.log(GroupObject)
         API.createGroup(GroupObject)
             .catch(err => console.log(err))
+            .then(RouteChange())
     }
 
     // Redirect Page to Main Group //
 
-    // const history = useHistory();
+    const history = useHistory();
+    // const {_id} = useParams
 
-    // const RouteChange = () => {
-    //     let path = "/main-group-page";
-    //     history.push(path);
-    // }
+    const RouteChange = async () => {
+        const {data} = await API.findGroup(groupRef.current.value, passwordRef.current.value)
+        console.log(data);
+        let path = "/group/" + data._id
+        history.push(path);
+    }
 
     // Visual Rendering //
 
@@ -44,12 +50,12 @@ function CreateGroup() {
                         {/* Group Name  */}
 
                         <h4>Group Name:</h4>
-                        <input type="text" name="name" onChange={handleInputChange} />
+                        <input type="text" name="name" ref={groupRef} onChange={handleInputChange} />
 
                         {/* Group Password  */}
 
                         <h4>Group Password:</h4>
-                        <input type="password" name="password" onChange={handleInputChange} />
+                        <input type="password" name="password" ref={passwordRef} onChange={handleInputChange} />
 
                         {/* Group Members  */}
 
