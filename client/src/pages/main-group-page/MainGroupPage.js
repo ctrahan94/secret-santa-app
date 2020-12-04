@@ -1,5 +1,8 @@
-import React from 'react'
-import DisplayMembers from "../../components/add-displayMembers/DisplayMembers"
+import React from 'react';
+import DisplayMembers from "../../components/add-displayMembers/DisplayMembers";
+import YourWishList from '../../components/Yourwishlist/Yourwishlist';
+import DisplayWishList from '../../components/Yourwishlist/DisplayWishList';
+import API from '../../utils/API';
 
 export default function MainGroupPage(props) {
 
@@ -45,7 +48,7 @@ export default function MainGroupPage(props) {
                 {/* YOUR wishlist Component */}
 
                 <div className="col-3 your-wishlist-component">
-
+                    <DisplayWishList />
 
 
                 </div>

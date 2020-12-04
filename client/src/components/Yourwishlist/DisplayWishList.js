@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import Addmembers from "./AddMembers"
+import Yourwishlist from './Yourwishlist';
 
-class DisplayMembers extends React.Component {
+
+class DisplayWishList extends React.Component {
 
     // Use State and Hooks Setting //
 
@@ -27,14 +28,14 @@ class DisplayMembers extends React.Component {
                 <div className="row members-display-modal">
                     <div className="col-12">
 
-                        <h2>Members:</h2>
+                        <h2>Wishlist:</h2>
 
                         <ol>
                             <li className="name-display">
                                 {/* {this.state} */}
                             </li>
                         </ol>
-                        <Addmembers/>
+                        <Yourwishlist/>
                     </div>
                 </div>
             </div>
@@ -42,4 +43,4 @@ class DisplayMembers extends React.Component {
     }
 }
 
-export default DisplayMembers;
+export default DisplayWishList;

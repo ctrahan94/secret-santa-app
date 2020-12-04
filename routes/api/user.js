@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const db = require("../../models");
 
-router.get("/user/:name/:pw", (req, res)  => {
+router.get("/member/:name/:pw", (req, res)  => {
   console.log("line 5")
-  db.User.findOne({
+  db.Member.findOne({
     name: req.params.name,
     password: req.params.pw
   })
