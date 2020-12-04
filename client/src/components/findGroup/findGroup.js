@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import API from '../../utils/API';
 import { useHistory } from "react-router-dom";
 
@@ -8,19 +8,30 @@ export default function FindGroup() {
     const passwordRef = useRef()
     const groupRef = useRef()
 
+    const [ groupData, setGroupData ] = useState({ groupName: "", password: ""})
+
+    const handleInputChange = (e) => {
+        setGroupData({...groupData, [e.target.name]: e.target.value})
+    }
+
     // External JS functions //
     const findGroup = async (e) => {
         e.preventDefault()
-        const { data } = await API.findGroup(groupRef.current.value, passwordRef.current.value)
-            .then(RouteChange())
+        console.log(groupData.groupName + "|" + groupData.password)
+        const { data } = await API.findGroup(groupData.groupName, groupData.password)
+
+        let path = "/" + data._id + "/" + data.name
+        history.push(path);
+
+        //RouteChange(data)
     }
 
     // Redirect Page to Main Group Page//
 
     const history = useHistory();
 
-    const RouteChange = async () => {
-        const { data } = await API.findGroup(groupRef.current.value, passwordRef.current.value)
+    const RouteChange = async (data) => {
+        console.log(groupRef.current.value, passwordRef.current.value);
         let path = "/" + data._id + "/" + data.name
         history.push(path);
     }
@@ -38,9 +49,9 @@ export default function FindGroup() {
                         {/* Group Name  */}
 
                         <h4 className="find-title-name">Group Name:</h4>
-                        <input type="text" ref={groupRef} name="join-group" placeholder="Group name" />
+                        <input type="text" ref={groupRef} name="groupName" placeholder="Group name" onChange={handleInputChange} />
                         <h4 className="find-title-password">Password:</h4>
-                        <input type="text" ref={passwordRef} name="join-password" placeholder="Holly Jolly Christmas" />
+                        <input type="text" ref={passwordRef} name="password" placeholder="Holly Jolly Christmas" onChange={handleInputChange} />
                         <button className="find-group-button" onClick={findGroup}>Submit</button>
                     </form>
                 </div>

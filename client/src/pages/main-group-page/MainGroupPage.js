@@ -1,7 +1,7 @@
 import React from 'react'
 import DisplayMembers from "../../components/add-displayMembers/DisplayMembers"
 import { useParams } from "react-router-dom";
-import API from "../../utils/API"
+import DisplayWishList from '../../components/Yourwishlist/DisplayWishList';
 
 export default function MainGroupPage() {
 
