@@ -1,5 +1,6 @@
-import React from 'react'
-import DisplayMembers from "../../components/add-displayMembers/DisplayMembers"
+import React from 'react';
+import DisplayMembers from "../../components/add-displayMembers/DisplayMembers";
+import API from '../../utils/API';
 
 export default function MainGroupPage(props) {
 
