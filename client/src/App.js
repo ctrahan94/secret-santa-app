@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import CreateGroup from "./components/createGroup/CreateGroup";
 import FindGroup from "./components/findGroup/FindGroup"
 import MainGroupPage from "./pages/main-group-page/MainGroupPage";
-import Yourwishlist from './components/Yourwishlist/Yourwishlist';
+
 
 function App() {
   return (
