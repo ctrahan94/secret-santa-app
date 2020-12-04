@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import API from "../../utils/API"
 import { useHistory } from "react-router-dom";
+
 function CreateGroup() {
     // Use State and Hooks Setting //
     const passwordRef = useRef()
@@ -18,12 +19,14 @@ function CreateGroup() {
             .catch(err => console.log(err))
             .then(RouteChange())
     }
+
     // Redirect Page to Main Group Page //
+
     const history = useHistory();
+
     const RouteChange = async () => {
         const { data } = await API.findGroup(groupRef.current.value, passwordRef.current.value)
-        console.log(data);
-        let path = "/group/" + data._id
+        let path = "/" + data._id + "/" + data.name
         history.push(path);
     }
     // Visual Rendering //

@@ -21,8 +21,8 @@ export default function AddMembers(groupName) {
 
     const addMember = (e) => {
         e.preventDefault();
-        console.log(MemberString)
-        API.addMembers(MemberString)
+        // console.log(MemberString)
+        API.getGroup()
             .catch(err => console.log(err));
     }
 
