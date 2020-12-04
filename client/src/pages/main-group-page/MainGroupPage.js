@@ -47,7 +47,7 @@ export default function MainGroupPage() {
                 {/* YOUR wishlist Component */}
 
                 <div className="col-3 your-wishlist-component">
-
+                    <DisplayWishList />
 
 
                 </div>
