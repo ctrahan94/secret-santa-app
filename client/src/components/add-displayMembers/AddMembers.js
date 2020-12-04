@@ -8,7 +8,7 @@ export default function AddMembers(groupName) {
 
     // Use State and Hooks Setting //
 
-    const [MemberString, setMember] = useState({ name: "", email: "" })
+    const [MemberString, setMember] = useState({ name: ""})
 
     const handleInputChange = (e) => {
         e.preventDefault()
@@ -42,7 +42,7 @@ export default function AddMembers(groupName) {
 
                         {/* Name  */}
 
-                        <h5 className="members-add-title">Full Name:</h5>
+                        <h5 className="members-add-title">Name:</h5>
                         <input type="text" name="name" onChange={handleInputChange}></input>
 
                         <button className="add-member-button" onClick={addMember}>Add</button>
